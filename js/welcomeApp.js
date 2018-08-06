@@ -8,5 +8,4 @@ var unicourt = new app.dataModel({
 	link: "https://unicourt.com/"
 });
 
-console.log(youtube.toJSON());
-console.log(unicourt.toJSON());
+unicourt.set("name", "Main Page");
