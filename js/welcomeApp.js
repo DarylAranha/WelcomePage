@@ -1,16 +1,17 @@
 var youtube = new app.dataModel({
-	name: "Youtube",
-	link: "https://www.youtube.com"
+    name: "Youtube",
+    link: "https://www.youtube.com"
 });
 
 var unicourt = new app.dataModel({
-	name: "Unicourt",
-	link: "https://unicourt.com/"
+    name: "Unicourt",
+    link: "https://unicourt.com/"
 });
 
-var dataCollection = new app.allData({
-		youtube,
-	 	unicourt
-});
+var dataCollection = new app.allData([
+    youtube,
+    unicourt
+]);
 
-console.log(dataCollection.toJSON());
+var display = new app.showAllData ({ collection: dataCollection });
+$("#allDataDisplay").html(display.render().el);
