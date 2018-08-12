@@ -1,6 +1,6 @@
 var app = app || {};
+
 app.showAllData = Backbone.View.extend({
-  tagName: "link",
   render: function () {
     this.collection.each(this.addLink, this);
     return this;

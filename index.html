@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Welcome</title>
-		<link rel="stylesheet" href="css/design.css">
-	</head>
-	<body>
-			<div class = "welcome_logo"></div>
-			<div class = "allDataDisplay"></div>
+    <head>
+        <meta charset="utf-8">
+        <title>Welcome</title>
+        <link rel="stylesheet" href="css/design.css">
+    </head>
+    <body>
+        <div class = "welcome_logo"></div>
+        <div id = "allDataDisplay"></div>
 
-			<script id = "links" type = "text/template">
-				<button onclick="window.location.href= <%= link %>" alt ="<%= name %>" >
-					<%= name %>
-				</button>
-			</script>
+        <script id = "links" type = "text/template">
+            <button onclick="window.location.href= '<%= link %>'" >
+                <%= name %>
+            </button>
+        </script>
 
-			<script src = "js/libs/jquery-3.3.1.min.js"></script>
-			<script src = "js/libs/underscore.js"></script>
-			<script src = "js/libs/backbone.js"></script>
-			<script src = "js/models/data.js"></script>
-			<script src = "js/views/showData.js"></script>
-			<script src = "js/collections/allData.js"></script>
-			<script src = "js/routes/router.js"></script>
-			<script src = "js/welcomeApp.js"></script>
-	</body>
+        <script src = "js/libs/jquery-3.3.1.min.js"></script>
+        <script src = "js/libs/underscore.js"></script>
+        <script src = "js/libs/backbone.js"></script>
+        <script src = "js/models/data.js"></script>
+        <script src = "js/views/showData.js"></script>
+        <script src = "js/views/showAllData.js"></script>
+        <script src = "js/collections/allData.js"></script>
+        <script src = "js/routes/router.js"></script>
+        <script src = "js/welcomeApp.js"></script>
+    </body>
+
 </html>
