@@ -4,14 +4,27 @@
         <meta charset="utf-8">
         <title>Welcome</title>
         <link rel="stylesheet" href="css/design.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <div class = "welcome_logo"></div>
-        <div id = "allDataDisplay"></div>
+        <div>
+            <ul>
+              <li><a href="#home">
+                <i class="fa fa-home" style="font-size:24px"></i>
+              </a></li>
+              <li style = "float:right;"><a href="#">
+                  <i class="fa fa-cog" style="font-size:24px"></i>
+              </a></li>
+            </ul>
+        </div>
+
+        <div id = "allDataDisplay" ></div>
 
         <script id = "links" type = "text/template">
-            <button onclick="window.location.href= '<%= link %>'" >
-                <%= name %>
+            <button class ="button" onclick="window.location.href='<%= link %>'">
+                <span>
+                    <%= name %>
+                </span>
             </button>
         </script>
 
@@ -24,6 +37,7 @@
         <script src = "js/collections/allData.js"></script>
         <script src = "js/routes/router.js"></script>
         <script src = "js/welcomeApp.js"></script>
+
     </body>
 
 </html>
