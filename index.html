@@ -3,29 +3,24 @@
     <head>
         <meta charset="utf-8">
         <title>Welcome</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/design.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
 
-        <div class="topnav" id="myTopnav">
-            <a href="#home" >Home</a>
-            <div class="dropdown">
-                <button class="dropbtn">Setting
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#">Add Button</a>
-                    <a href="#">Settings</a>
-                </div>
-            </div>
-            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-        </div>
+            <ul>
+              <li><a href="#home">
+                <i class="fa fa-home" style="font-size:24px"></i>
+              </a></li>
+              <li style = "float:right;"><a href="#">
+                  <i class="fa fa-cog" style="font-size:24px"></i>
+              </a></li>
+            </ul>
 
-        <div id = "allDataDisplay" style="display:block"></div>
+        <div id = "allDataDisplay" ></div>
 
         <script id = "links" type = "text/template">
-            <button  class = "button-links" onclick="window.location.href= '<%= link %>'" >
+            <button class ="button" onclick="window.location.href='<%= link %>'">
                 <span>
                     <%= name %>
                 </span>
@@ -42,16 +37,6 @@
         <script src = "js/routes/router.js"></script>
         <script src = "js/welcomeApp.js"></script>
 
-        <script>
-            function myFunction() {
-                var x = document.getElementById("myTopnav");
-                if (x.className === "topnav") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "topnav";
-                }
-            }
-        </script>
     </body>
 
 </html>
